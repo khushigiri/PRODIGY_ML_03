@@ -6,7 +6,6 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 
 
-# Function to load images and extract HOG features
 def load_images(folder, limit=500):
     features = []
     labels = []
@@ -30,7 +29,6 @@ def load_images(folder, limit=500):
             img = cv2.resize(img, (64, 64))
             img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-            # HOG feature extraction
             hog_features = hog(
                 img,
                 orientations=9,
@@ -51,7 +49,6 @@ def load_images(folder, limit=500):
     return np.array(features), np.array(labels)
 
 
-# Paths
 train_path = "dataset/training_set"
 test_path = "dataset/test_set"
 
@@ -76,7 +73,6 @@ accuracy = accuracy_score(y_test, predictions)
 print("Model Accuracy:", accuracy)
 
 
-# Predict single image
 def predict_image(image_path):
 
     img = cv2.imread(image_path)
@@ -106,5 +102,4 @@ def predict_image(image_path):
         print("Prediction: Dog")
 
 
-# Test prediction
 predict_image("dataset/test_set/dogs/dog.4001.jpg")
