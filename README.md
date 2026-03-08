@@ -68,17 +68,6 @@ The trained model can predict whether a new image contains a cat or a dog.
 
 ---
 
-## Example Output
-
-Loading training data...
-Loading test data...
-Training SVM model...
-Predicting...
-Model Accuracy: 0.82
-Prediction: Dog
-
----
-
 ## Results
 
 Using HOG feature extraction with SVM, the model achieves approximately:
@@ -86,15 +75,5 @@ Using HOG feature extraction with SVM, the model achieves approximately:
 Accuracy: ~80–85%
 
 This approach significantly improves performance compared to training SVM directly on raw image pixels.
-
----
-
-## Key Concepts Used
-
-* Image preprocessing
-* Feature extraction using HOG
-* Support Vector Machines (SVM)
-* Supervised learning
-* Image classification
 
 ---
